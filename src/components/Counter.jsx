@@ -1,12 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Counter = () => {
+  const count = useSelector((state) => state.counter.value);
   return (
     <div>
       <button>increment</button>
       <br />
       <br />
-      <div>{}</div>
+      <div>{count}</div>
       <br />
       <br />
       <button>Decrement</button>
